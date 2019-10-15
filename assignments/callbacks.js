@@ -76,9 +76,16 @@ cbMultiplyNums = (x, y) => x * y;
 console.log(multiplyNums(5, 10, cbMultiplyNums));
 
 function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+  list.forEach(function(currentValue){
+    if(item === currentValue){
+      return cb(true);
+    }
+  })
 }
+
+let containsCB = argumentPassed => console.log(argumentPassed);
+
+contains("Gum", items, containsCB)
 
 /* STRETCH PROBLEM */
 
