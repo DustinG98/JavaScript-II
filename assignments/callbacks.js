@@ -75,17 +75,32 @@ cbMultiplyNums = (x, y) => x * y;
 
 console.log(multiplyNums(5, 10, cbMultiplyNums));
 
-function contains(item, list, cb) {
-  list.forEach(function(currentValue){
-    if(item === currentValue){
+// function contains(item, list, cb) {
+//   list.forEach(function(currentValue){
+//     if(item === currentValue){
+//       return cb(true);
+//     } else {
+//       cb(false);
+//     }
+//   })
+// }
+
+// let containsCB = argumentPassed => console.log(argumentPassed);
+
+// contains("Gum", items, containsCB)
+
+function contains(item, list, cb){
+  for(let i = 0; i < list.length; i++){
+    if (item == list[i]) {
       return cb(true);
     }
-  })
+  }
+  return cb(false);
 }
 
 let containsCB = argumentPassed => console.log(argumentPassed);
 
-contains("Gum", items, containsCB)
+contains("Gum", items, containsCB);
 
 /* STRETCH PROBLEM */
 
