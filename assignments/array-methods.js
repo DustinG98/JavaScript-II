@@ -115,4 +115,3 @@ runnersEmail = runners.map((runner) => runner.email);
 // runners.map(function(runner){
 //   return runner.email;
 // })
-
