@@ -3,7 +3,18 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
+function myFamily(lastName){
+  console.log(`The ${lastName}'s are the weirdest family ever!`);
+  function immediateFamily(immFam){
+    console.log(`${immFam} these people mean the most to me`);
+    function myParents(parents){
+      console.log(`${parents} thank you for raising me`)
+    }//this closes parents
+    myParents(['Julie',' and ', 'Bobby']);
+  }//this closes immediateFamily
+  immediateFamily(['Destiny',' and ', 'Karl',' and ', 'David'])
+}//this closes myFamily
+  myFamily('Graham')
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
